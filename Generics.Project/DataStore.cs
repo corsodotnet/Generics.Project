@@ -25,7 +25,7 @@ namespace Generics.Project
             else
             {
                 T[] _nextData = new T[_data.Length + 4];
-                Array.Copy(_data, _nextData, index);
+                Array.Copy(_data, _nextData, _nextData.Length);
                 _data = _nextData;
             }
         }
@@ -51,7 +51,9 @@ namespace Generics.Project
 
             foreach (var prop in campi)
             {
-                Console.WriteLine(prop.Name);
+                // p.Modello  ===  prop.Name; 
+                // p.Marca  ===  prop.Name; 
+                // p.NFactory  ===  prop.Name; 
             }
         }
     }
